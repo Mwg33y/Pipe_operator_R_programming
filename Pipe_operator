@@ -1,0 +1,35 @@
+# The pipe operator
+#Use the pipe operator to group the used_car dataframe by car brand, 
+#count the number of used cars for each brand, find the average 
+#price for each car brand, and filter out any brand that has a 
+#count less than 100
+
+#install packages and libraries in R for data importation,analysis, 
+#manipulation
+
+install.packages("tidyverse")
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
+
+#retrieve the used car data
+used_cars <- read.csv(
+  "C:\\Users\\Andul\\Desktop\\DataAnalysis22\\Portfolio\\Regression_Example_R\\Regression_Analysis_Used_Cars.csv",
+  stringsAsFactors = FALSE)
+
+
+
+#convert used_cars chart to a datframe
+as.data.frame(used_cars)
+
+
+
+#the pipe operator
+used_cars %>%
+    group_by(Brand) %>%
+    summarize(
+      count=n(),
+      avg.Price=mean(Price,na.rm=T)
+    )
+    filter(count>100)
