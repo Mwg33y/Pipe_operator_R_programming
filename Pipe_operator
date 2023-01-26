@@ -15,7 +15,7 @@ library(ggplot2)
 
 #retrieve the used car data
 used_cars <- read.csv(
-  "C:\\Users\\Andul\\Desktop\\DataAnalysis22\\Portfolio\\Regression_Example_R\\Regression_Analysis_Used_Cars.csv",
+  "C:\\Users\\Abdul\\Desktop\\DataAnalysis22\\Portfolio\\Regression_Example_R\\Regression_Analysis_Used_Cars.csv",
   stringsAsFactors = FALSE)
 
 
